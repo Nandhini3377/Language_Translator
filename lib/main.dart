@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:language_translator/Home.dart';
+import 'package:language_translator/Screens/Home.dart';
+import 'package:language_translator/Screens/Splash.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark()
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:translator/translator.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,6 +10,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeState extends State<HomeScreen> {
+ 
+
+
   TextEditingController text1 = TextEditingController();
   GoogleTranslator translator = GoogleTranslator(client: ClientType.siteGT);
   var result = "Default Text";
@@ -70,6 +74,7 @@ class _HomeState extends State<HomeScreen> {
     final w=MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text(
           'Language Translator',
@@ -125,7 +130,8 @@ class _HomeState extends State<HomeScreen> {
                     backgroundColor: Colors.cyan.shade500),
                 onPressed: () {
                   trans();
-                  print(result);
+                  
+                   
                 },
                 icon: Icon(
                   Icons.g_translate,
